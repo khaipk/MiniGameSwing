@@ -1,4 +1,4 @@
-package game;
+package game1;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -7,26 +7,27 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Main extends JFrame {
+public class RunGame extends JFrame {
 
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		new Main();
+		new RunGame().setVisible(true);
 	}
 
 	/**
 	 * Create the frame.
 	 */
-	public Main() {
-		add(new MainGame());  //choose
-		//add(new MainGame2());
+	public RunGame() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setBounds(100, 100, 450, 300);
+		add(new MainGame());
 		setSize(500, 500);
-		setVisible(true);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
 }
