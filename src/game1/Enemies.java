@@ -6,35 +6,36 @@ public class Enemies extends Items {
 	
 	private int dx;
 	private int dy;
-	private int speed =1;
+	private int speedx =1;
+	private int speedy =1;
 
 	public Enemies(int x, int y, int height, int width) {
 		super(x, y, height, width);
 	}
 	
-	public void moveX() {
-		dx = speed;
-		if(x>500 ) {
+	public void move() {
+		dx = speedx;
+		dy = speedy *1;
+		
+		if(x>450 ) {
 			Random rd = new Random();
-			speed = rd.nextInt(2)-2;
+			speedx = rd.nextInt(2)-2;
 		}
 		if(x<0) {
 			Random rd = new Random();
-			speed = rd.nextInt(2)+1;;
+			speedx = rd.nextInt(2)+1;;
 		}
-		x += dx;
-	}
-	
-	public void moveY() {
-		dy = speed;
+		
 		if(y<0) {
 			Random rd = new Random();
-			speed =rd.nextInt(2)+1;
+			speedy =rd.nextInt(2)+1;
 		}
-		if(y>500) {
+		if(y>450) {
 			Random rd = new Random();
-			speed = rd.nextInt(2)-2;
+			speedy = rd.nextInt(2)-2;
 		}
+		
+		x += dx;
 		y += dy;
 	}
 	

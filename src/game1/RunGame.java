@@ -9,7 +9,6 @@ import javax.swing.border.EmptyBorder;
 
 public class RunGame extends JFrame {
 
-	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -26,7 +25,6 @@ public class RunGame extends JFrame {
 		//setBounds(100, 100, 450, 300);
 		add(new MainGame());
 		setSize(500, 500);
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
 	}
 
